@@ -4,41 +4,73 @@ layout: default
 
 {% include covid-menu.html %}
 
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="/f/billboard.min.js"></script>
+<link rel="stylesheet" href="/f/billboard.min.css">
+
 <h1>Recovery by Country</h1>
 
-<p>This document is tracking recovery methods/protocols by country (typically EU). The goal is to track major events, and local data as the countries lift their respective restrictions.</p>
+<p>This document is tracking recovery methods/protocols by country (typically EU). The goal is to track major events,
+    and local data as the countries lift their respective restrictions.</p>
 
 <h2>France</h2>
 <a href="https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_France">Wikipedia</a>,
 <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/5e09dff7cb434fb194e22261689e2887">Hub</a>
 
+<div class="graph" id="graphFRA"></div>
+
 <div class="timeline">
-2020-03-12 Announcement that schools would close from 16/3
-2020-03-13 Closure of all non-essential public places (restaurants, cinemas, etc).
-2020-03-16 Mandatory home confinement for 15 days starting noon 17/3
-2020-03-27 Extension of home confinement until 15/4.
-2020-04-08 Further extension
-2020-04-13 Lockdown to be continued until 11 May.
+    2020-03-12 Announcement that schools would close from 16/3
+    2020-03-13 Closure of all non-essential public places (restaurants, cinemas, etc).
+    2020-03-16 Mandatory home confinement for 15 days starting noon 17/3
+    2020-03-27 Extension of home confinement until 15/4.
+    2020-04-08 Further extension
+    2020-04-13 Lockdown to be continued until 11 May.
 </div>
+
+<script defer>
+    (function () {
+        var chart = bb.generate({
+            data: {
+                columns: [
+                    ["test1", 30, 200, 100, 400, 150, 250],
+                    ["test2", 50, 20, 10, 40, 15, 25]
+                ]
+            },
+            bindto: "#graphFRA"
+        });
+
+
+
+    })();
+</script>
 
 <h2>Germany</h2>
 <a href="https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Germany">Wikipedia</a>,
 <a href="https://hystreet.com/locations">Footfall data</a>,
-<a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/2020-04-25-en.pdf?__blob=publicationFile">Situation Report 25/04</a>,
+<a
+    href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/2020-04-25-en.pdf?__blob=publicationFile">Situation
+    Report 25/04</a>,
 <a href="https://experience.arcgis.com/experience/478220a4c454480e823b17327b2bf1d4">Covid-19 Dashboard (RKI)</a>
 <div class="timeline">
-2020-01-27 First case confirmed
-2020-03-09 First death
-2020-03-13 Protection stage - School & kindergarten closures.
-2020-03-15 Borders to five neighbouring countries closed.
-2020-03-22 National curfew; commute to work, sports and shopping only. Not more than two people.
-2020-03-31 Jena first larger city to oblige wearing of masks.
-2020-04-07 Launch of Corona-Datenspende (app) for voluntary use to monitor spread of virus. 50,000 installed the same day.
-2020-04-20 (announced 15/4) Shops with retail space up to 800sq.m to reopen, + bookshops, bike stores and car dealerships.
-2020-04-27 <a href="https://www.bbc.co.uk/news/world-europe-52382196">Face masks become compulsory</a> on public transport (rollout date by state varies)
-2020-05-03 (<a href="https://www.bundesregierung.de/breg-en/issues/fahrplan-corona-pandemie-1744276">annc 15/4</a>) Restrictions on movements remain in place until at least this date.
-2020-05-04 (<a href="https://www.bundesregierung.de/breg-en/issues/fahrplan-corona-pandemie-1744276">annc 15/4</a>) Schools to re-open gradually. Hair salons to open (under strict rules).
-2020-08-31 (<a href="https://www.bundesregierung.de/breg-en/issues/fahrplan-corona-pandemie-1744276">annc 15/4</a>) No large cultural events before this date.
+    2020-01-27 First case confirmed
+    2020-03-09 First death
+    2020-03-13 Protection stage - School & kindergarten closures.
+    2020-03-15 Borders to five neighbouring countries closed.
+    2020-03-22 National curfew; commute to work, sports and shopping only. Not more than two people.
+    2020-03-31 Jena first larger city to oblige wearing of masks.
+    2020-04-07 Launch of Corona-Datenspende (app) for voluntary use to monitor spread of virus. 50,000 installed the
+    same day.
+    2020-04-20 (announced 15/4) Shops with retail space up to 800sq.m to reopen, + bookshops, bike stores and car
+    dealerships.
+    2020-04-27 <a href="https://www.bbc.co.uk/news/world-europe-52382196">Face masks become compulsory</a> on public
+    transport (rollout date by state varies)
+    2020-05-03 (<a href="https://www.bundesregierung.de/breg-en/issues/fahrplan-corona-pandemie-1744276">annc 15/4</a>)
+    Restrictions on movements remain in place until at least this date.
+    2020-05-04 (<a href="https://www.bundesregierung.de/breg-en/issues/fahrplan-corona-pandemie-1744276">annc 15/4</a>)
+    Schools to re-open gradually. Hair salons to open (under strict rules).
+    2020-08-31 (<a href="https://www.bundesregierung.de/breg-en/issues/fahrplan-corona-pandemie-1744276">annc 15/4</a>)
+    No large cultural events before this date.
 </div>
 
 
@@ -46,17 +78,20 @@ layout: default
 <a href="https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Belgium">Wikipedia</a>
 
 <div class="timeline">
-2020-02-04 First case detected
-2020-03-10 Govt advise against indoor events with more than 1000 people.
-2020-03-11 First death on Belgian territory
-2020-03-13 (annc 12/3) Govt orders closure of schools, discos, cafes and restaurants.
-2020-03-18 (annc 17/3) Non-essential travel prohibited. Non-essential shops to close. Gatherings banned.
-2020-03-20 Borders closed to non-essential travel.
-2020-05-03 (annc 27/3; 15/4) Measures extended to this date.
-2020-05-04 (<a href="https://www.bbc.co.uk/news/world-europe-52421723">annc 25/4</a>) Fabric shops to reopen; industry to resume. All (12+) to wear masks on public transport.
-2020-05-11 (<a href="https://www.bbc.co.uk/news/world-europe-52421723">annc 25/4</a>) All shops to reopen.
-2020-05-18 (<a href="https://www.bbc.co.uk/news/world-europe-52421723">annc 25/4</a>) Schools to reopen with limited classes.
-2020-06-08 (<a href="https://www.bbc.co.uk/news/world-europe-52421723">annc 25/4</a>) Cafés and restaurants permitted to reopen.
+    2020-02-04 First case detected
+    2020-03-10 Govt advise against indoor events with more than 1000 people.
+    2020-03-11 First death on Belgian territory
+    2020-03-13 (annc 12/3) Govt orders closure of schools, discos, cafes and restaurants.
+    2020-03-18 (annc 17/3) Non-essential travel prohibited. Non-essential shops to close. Gatherings banned.
+    2020-03-20 Borders closed to non-essential travel.
+    2020-05-03 (annc 27/3; 15/4) Measures extended to this date.
+    2020-05-04 (<a href="https://www.bbc.co.uk/news/world-europe-52421723">annc 25/4</a>) Fabric shops to reopen;
+    industry to resume. All (12+) to wear masks on public transport.
+    2020-05-11 (<a href="https://www.bbc.co.uk/news/world-europe-52421723">annc 25/4</a>) All shops to reopen.
+    2020-05-18 (<a href="https://www.bbc.co.uk/news/world-europe-52421723">annc 25/4</a>) Schools to reopen with limited
+    classes.
+    2020-06-08 (<a href="https://www.bbc.co.uk/news/world-europe-52421723">annc 25/4</a>) Cafés and restaurants
+    permitted to reopen.
 </div>
 
 <h2>Netherlands</h2>
@@ -64,14 +99,14 @@ layout: default
 <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/cfc2084c995c40e7ae72254029bf6251">Hub</a>
 
 <div class="timeline">
-2020-02-27 First case detected
-2020-03-06 First death reported.
-2020-03-09 Citizens asked to stop shaking hands. Citizens in Noord-Brabant to work from home where possible.
-2020-03-10 In Noord-Brabant, larger events cancelled.
-2020-03-12 All meetings 100+ people cancelled. Work encouraged from home.
-2020-03-15 Schools closed. Cafes, restaurants, sports clubs, saunas, sex clubs and coffeeshops to close.
-2020-03-17 Schools to stay open only for final year students' exams.
-2020-03-23 Stricter social distancing announced.
-2020-03-24 Final exams cancelled.
-2020-04-28 (annc 31/3) All measures extended.
+    2020-02-27 First case detected
+    2020-03-06 First death reported.
+    2020-03-09 Citizens asked to stop shaking hands. Citizens in Noord-Brabant to work from home where possible.
+    2020-03-10 In Noord-Brabant, larger events cancelled.
+    2020-03-12 All meetings 100+ people cancelled. Work encouraged from home.
+    2020-03-15 Schools closed. Cafes, restaurants, sports clubs, saunas, sex clubs and coffeeshops to close.
+    2020-03-17 Schools to stay open only for final year students' exams.
+    2020-03-23 Stricter social distancing announced.
+    2020-03-24 Final exams cancelled.
+    2020-04-28 (annc 31/3) All measures extended.
 </div>
