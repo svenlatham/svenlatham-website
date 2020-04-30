@@ -31,6 +31,7 @@ layout: default
 <script defer>
     (function () {
         var chart = bb.generate({
+            x: "x",
             data: {
                 columns: [
                     ["test1", 30, 200, 100, 400, 150, 250],
@@ -39,10 +40,16 @@ layout: default
             },
             bindto: "#graphFRA"
         });
-
-
-
     })();
+    var xhr = new XMLHttpRequest();
+    xhr.onloadend(function(ev) {
+        alert("BEEP");
+    });
+    xhr.open("GET","data/FRA.json");
+    xhr.send();
+
+
+
 </script>
 
 <h2>Germany</h2>
