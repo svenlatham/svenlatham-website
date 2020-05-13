@@ -31,34 +31,21 @@ function getFile($line) {
     return $k; // Roots are just the two-character country code
 }
 
-// Should be in same folder as the root project
-echo "Downloading CSV\n";
-$outputs = array();
 
-$gmr = explode("\n", file_get_contents("https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv"));
-foreach($gmr as $row) {
-    $line = str_getcsv($row);
+
+$fpcsv = fopen("Global_Mobility_Report.csv", "r");
+while ($line = fgetcsv($fpcsv)) {
     // We're interested in country_region_code, country_region, sub_region_1 and sub_region_2
     // For our purposes, we don't care about sub_region_2 so will only consume data when it's blank
     if ($line[0] == 'country_region_code') { continue; }
     if (!in_array($line[0], $scans)) { continue; }
     if ($line[3]) { continue; } // We don't support sub_region_2 just yet...
     $file = getFile($line);
-    if (!array_key_exists($file, $outputs)) {
-        printf("Processing %s %s %s\n", $line[0], $line[1], $line[2]);
-        $outputs[$file] = [];
-    }
-    $outputs[$file][] = array_slice($line,4);
-}
-foreach($outputs as $k => $v) {
-    printf("Writing %s\n", $k);
-    $fp = fopen("../data/google/{$k}.csv", 'w');
-    foreach($v as $line) {
-        fputcsv($fp, $line);
-    }
+    $fp = fopen("output/{$file}.csv", 'a');
+    fputcsv($fp, array_slice($line,4));
     fclose($fp);
 }
-
-$fp = fopen("../data/google/index.json", 'w');
+fclose($fpcsv);
+$fp = fopen("output/index.json", 'w');
 fputs($fp, json_encode($index));
 fclose($fp);
