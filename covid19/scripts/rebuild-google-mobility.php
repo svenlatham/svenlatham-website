@@ -4,7 +4,7 @@
 # Global file comes in via STDIN; we'll output to the output/ subdirectory.
 
 
-$scans = array('GB','US','FR','IE','AU','DE','BE','NL'); // Countries we want to know about
+$scans = array('GB','US','FR','IE','AU','DE','BE','NL','DK','NZ','SE','IT','PT','ES'); // Countries we want to know about
 $index = array();
 
 function getHash($input) {

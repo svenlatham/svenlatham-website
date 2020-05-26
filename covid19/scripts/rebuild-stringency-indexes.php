@@ -1,9 +1,22 @@
 #!/usr/bin/php
 <?php
 
-$countries = array("FRA");
+$countries = array(
+    "FRA" => "FR",
+    "GBR" => "UK",
+    "NLD" => "NL",
+    "ITA" => "IT",
+    "DEU" => "DE",
+    "ESP" => "ES",
+    "DNK" => "DK",
+    "AUS" => "AU",
+    "AUT" => "AT",
+    "SWE" => "SE",
+    "NZL" => "NZ",
+    "USA" => "US"
+);
 
-foreach ($countries as $country) {
+foreach ($countries as $country => $map) {
     $pointer = new DateTime("2020-03-01");
     $output = array(); // Key will be date; values will be an array of confirmed, deaths, stringency
     while ($pointer->format('Y-m-d') < date('Y-m-d')) {
@@ -18,9 +31,9 @@ foreach ($countries as $country) {
         $row["stringency"] = $data['stringencyData']['stringency'];
         $output[$k] = $row;
         $pointer->modify("+1 day");
-        sleep(1);
+        //sleep(1);
     }
-    $fp = fopen("{$country}.json", "w");
+    $fp = fopen("../data/stringency/{$map}.json", "w");
     fputs($fp, json_encode($output));
     fclose($fp);
 }
