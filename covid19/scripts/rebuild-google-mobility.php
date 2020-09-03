@@ -48,7 +48,7 @@ foreach($gmr as $row) {
         printf("Processing %s %s %s\n", $line[0], $line[1], $line[2]);
         $outputs[$file] = [];
     }
-    $outputs[$file][] = array_slice($line,6);
+    $outputs[$file][] = array_slice($line,7);
 }
 foreach($outputs as $k => $v) {
     printf("Writing %s\n", $k);
