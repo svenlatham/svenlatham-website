@@ -1,9 +1,7 @@
+title: 🍺 Beer
 ---
-layout: default
-title: Beer
----
+body:
 
-<h1>🍺 Beer</h1>
 
 <p>I do enjoy a fine Belgian beer. Here's my ongoing list...</p>
 

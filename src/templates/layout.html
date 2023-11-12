@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>{% block title %}Welcome{% endblock %} — Sven Latham</title>
+  </head>
+
+  <body>
+      
+    <main id="content" class="main-content" role="main">
+      <div id="svenlatham"><a href="/">svenlatham.com</a></div>
+      {% block body %}{% endblock %}
+    </main>
+  </body>
+</html>

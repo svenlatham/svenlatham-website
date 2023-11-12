@@ -1,2 +1,5 @@
-FROM cr.brightbox.com/acc-uww2d/sven/www-basic
-COPY . /var/www/html/
+FROM docker.io/python:3-slim
+RUN pip install Lektor
+WORKDIR /src
+COPY ./src/ /src
+ENTRYPOINT ["lektor"]
