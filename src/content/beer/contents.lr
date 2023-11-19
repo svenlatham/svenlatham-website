@@ -2,6 +2,7 @@ title: 🍺 Beer
 ---
 body:
 
+<div class="container">
 
 <p>I do enjoy a fine Belgian beer. Here's my ongoing list...</p>
 
@@ -78,3 +79,6 @@ body:
 <li>Bolleke de Koninck ... fizzy, sharp. Bit of a tough one to drink. On presentation quite fizzy, albeit with a soft caramel taste.</li>
 <li>Monks Stout Dupont... I know when I'm beaten. Deep strong stout flavour, a little too much so for my tastes.</li>
 </ul>
+
+
+</div>

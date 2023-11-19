@@ -1,0 +1,32 @@
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+  }
+  
+  .img-card {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    margin-bottom: 1rem;
+  }
+  
+  .hero-section {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e3e4e6;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+  }
+  
+  .btn-accent {
+    background-color: #004085;
+    color: white;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    border-radius: .25rem;
+    transition: background-color .15s ease-in-out;
+  }
+  
+  .btn-accent:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+  }
+  

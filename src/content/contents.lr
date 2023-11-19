@@ -2,47 +2,53 @@ title: Sven Latham
 ---
 body:
 
-<p>I am a researcher, strategist and advisor with many years' experience working with senior managers at
-    companies large and small, across multiple industries and countries.</p>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-3 col-md-12 mb-4">
+            <img src="/static/sven-latham.jpg" class="img-thumbnail img-fluid" alt="Sven Latham">
+
+            <div class="my-4">
+                <a href="mailto:sven@svenlatham.com" class="btn btn-primary">Send me an email</a>
+              </div>
+        </div>
+        <div class="col-lg-9 col-md-12">
+            <h1>Sven Latham</h1>
+            <p class="lead">I am a researcher, strategist and advisor with many years' experience working with senior managers at companies large and small, across multiple industries and countries.</p>
+            <p>My expertise are in software systems, automation &amp; data in the domains of town centre management and
+                government at various levels &#8211; although my travels have led me into all sorts of weird &amp; wonderful
+                sectors as well.</p>
+        
+        
+            <p>I work at the <a href="https://www.london.gov.uk/">Greater London Authority</a>, managing the <a
+                    href="https://data.london.gov.uk/">London Datastore</a> to help
+                9 million Londoners benefit from the use of data to help drive positive change.</p>
 
 
-
-<p>My expertise are in software systems, automation &amp; data in the domains of town centre management and
-    government at various levels &#8211; although my travels have led me into all sorts of weird &amp; wonderful
-    sectors as well.</p>
-
-
-
-<figure style="float: right; margin: 20px;">
-    <img src="/static/sven-latham.jpg" alt="Picture of Sven" width="257" height="193">
-    <figcaption>On one of my town surveys.</figcaption>
-</figure>
-
-
-<p>I work at the <a href="https://www.london.gov.uk/">Greater London Authority</a>, managing the <a href="https://data.london.gov.uk/">London Datastore</a> to help
-    9 million Londoners access and make use of data to help drive positive change.</p>
-
-
-
-<p>In my spare time, I enjoy travelling, map collecting and studying languages. I&#8217;m partial to a <a
-        href="/beer/">good Belgian
-        beer</a>. My ideal holiday is on a canal boat in the Midlands with a delicious evening pub meal to look forward
-    to.
-</p>
+            <p>I am also Vice-Chair of Governors at <a href="https://sites.google.com/bridgemary-tkat.org/bridgemaryschool">Bridgemary
+                    School</a>, a secondary school in Gosport, Hampshire.</p>
+        
+        
+        
+            <p>In my spare time, I enjoy travelling, map collecting and studying languages. I&#8217;m partial to a <a
+                    href="/beer/">good Belgian
+                    beer</a>. My ideal holiday is on a canal boat in the Midlands with a delicious evening pub meal to look
+                forward
+                to.
+            </p>
+        
+        
+        
+            <p>I can speak for hours on data, security, technology, knowledge management and other subjects close to my
+                heart.
+                Thankfully I can also condense it into presentations, talks, articles or a private chat over coffee (black,
+                no
+                sugar).</p>
+        
+        
 
 
+        </div>
+    </div>
+</div>
 
-<p>I can speak for hours on data, security, technology, knowledge management and other subjects close to my heart.
-    Thankfully I can also condense it into presentations, talks, articles or a private chat over coffee (black, no
-    sugar).</p>
-
-
-
-<p>If you want to reach me, <a href="mailto:sven@svenlatham.com">send me an email</a>.
-</p>
-
-<p>Links of interest:</p>
-<ul>
-    <li><a href="https://www.yetanotherblog.com/">Yet Another Blog</a>, where I occasionally collect thoughts.</li>
-    <li><a href="https://github.com/svenlatham/">GitHub</a> for other bits &amp; pieces.</li>
-</ul>
